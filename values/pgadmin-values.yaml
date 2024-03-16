@@ -1,0 +1,109 @@
+VolumePermissions:
+  enabled: false
+affinity: {}
+annotations: {}
+autoscaling:
+  enabled: false
+  maxReplicas: 100
+  minReplicas: 1
+  targetCPUUtilizationPercentage: 80
+commonLabels: {}
+containerPorts:
+  http: 80
+containerSecurityContext:
+  allowPrivilegeEscalation: false
+  enabled: false
+env:
+  email: alfian@isnan.me
+  enhanced_cookie_protection: "False"
+  password: Amanasaya253426_~
+  variables: []
+envVarsFromConfigMaps: []
+envVarsFromSecrets: []
+existingSecret: ""
+extraConfigmapMounts: []
+extraContainers: ""
+extraDeploy: []
+extraInitContainers: ""
+extraSecretMounts: []
+extraVolumeMounts: []
+extraVolumes: []
+image:
+  pullPolicy: IfNotPresent
+  registry: docker.io
+  repository: dpage/pgadmin4
+  tag: ""
+ingress:
+  annotations: {}
+  enabled: false
+  hosts:
+  - host: chart-example.local
+    paths:
+    - path: /
+      pathType: Prefix
+  tls: []
+init:
+  resources: {}
+livenessProbe:
+  failureThreshold: 3
+  initialDelaySeconds: 30
+  periodSeconds: 60
+  successThreshold: 1
+  timeoutSeconds: 15
+namespace: null
+networkPolicy:
+  enabled: true
+nodeSelector: {}
+persistentVolume:
+  accessModes:
+  - ReadWriteOnce
+  annotations: {}
+  enabled: true
+  size: 10Gi
+podAnnotations: {}
+podLabels: {}
+priorityClassName: ""
+readinessProbe:
+  failureThreshold: 3
+  initialDelaySeconds: 30
+  periodSeconds: 60
+  successThreshold: 1
+  timeoutSeconds: 15
+replicaCount: 1
+resources: {}
+secretKeys:
+  pgadminPasswordKey: password
+securityContext:
+  fsGroup: 5050
+  runAsGroup: 5050
+  runAsUser: 5050
+serverDefinitions:
+  enabled: false
+  resourceType: ConfigMap
+  servers: null
+service:
+  annotations: {}
+  clusterIP: ""
+  loadBalancerIP: ""
+  port: 80
+  portName: http
+  targetPort: 80
+  type: ClusterIP
+serviceAccount:
+  annotations: {}
+  automountServiceAccountToken: false
+  create: false
+  name: ""
+strategy: {}
+templatedPodAnnotations: ""
+test:
+  image:
+    registry: docker.io
+    repository: busybox
+    tag: latest
+  resources: {}
+  securityContext:
+    fsGroup: 5051
+    runAsGroup: 5051
+    runAsUser: 5051
+tolerations: []
