@@ -1,4 +1,6 @@
-192.168.26.173 node1-1
-192.168.26.174 node1-2
-192.168.26.175 node2-1
-192.168.26.176 node2-2
+192.168.0.11 admin-mac-m1
+192.168.0.12 node-mac-m1
+192.168.0.21 admin-mac-intel
+192.168.0.22 node-mac-intel
+192.168.0.31 admin-win-amd
+192.168.0.32 node-win-amd
